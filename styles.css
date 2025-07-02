@@ -1,0 +1,154 @@
+/* =========================
+   Root Variables & Resets
+   ========================= */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --color1: #5f8fff;
+  --color2: #ff6a60;
+  --color3: #d02f1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  color: var(--color1);
+  font-family: "Monomakh", system-ui;
+  font-size: 2.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: var(--color1);
+  font-family: "Monomakh", system-ui;
+  font-size: 1.1rem;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.columnTwo > p {
+  line-height: 1.5;
+  padding: 1rem 0;
+}
+
+p.titles {
+  font-weight: bold;
+  color: var(--color1);
+}
+
+p > span {
+  font-weight: 200;
+  color: var(--black);
+}
+
+h2.back {
+  margin-bottom: 1rem;
+}
+
+/* GENERAL RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background-image: radial-gradient(#6b8fc8 2px, transparent 2px),
+    radial-gradient(#6b8fc8 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  background-color: #5c7cb5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD CONTAINER */
+.card-container {
+  perspective: 1000px; /* A large perspective makes the flipping effect more natural */
+}
+
+.card {
+  width: 650px;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d; /* To see both sides flipping realistically, the card container needs this; so the front and back don’t get flattened and disappear or look weird. */
+  transition: transform 0.8s ease-in-out;
+}
+
+/* FLIP CLASS */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK FACE STYLES */
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  flex-direction: column;
+}
+
+/* FRONT FACE */
+.card-front {
+  z-index: 2;
+}
+
+/* BACK FACE */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* IMAGE STYLING */
+.card-icon {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+/* BUTTON STYLING */
+button {
+  background: var(--color2);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: var(--color3);
+}
+
+/* CLOSE BUTTON (X) */
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 14px;
+  background: transparent;
+  font-size: 2rem;
+  padding: 0;
+  color: #444;
+}
+
+.close-btn:hover {
+  background-color: transparent;
+}
