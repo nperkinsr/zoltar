@@ -3,27 +3,19 @@
 
 When you click the “Reveal” button, the Zoltar card flips to show a mystical prediction made up of five randomised elements, each drawn from a different array stored in a JSON file:
 
--**Fortune** – The main prediction
-
--**Only applies if** – A random, often ridiculous condition
-
--**Avoid today** – Something suspicious to steer clear of
-
--**Lucky item** – Your lucky object for the day
-
--**Heed the wisdom of Zoltar** – An oddly specific or unhinged piece of advice
++ **Fortune** – The main prediction
++ **Only applies if** – A random, often ridiculous condition
++ **Avoid today** – Something suspicious to steer clear of
++ **Lucky item** – Your lucky object for the day
++ **Heed the wisdom of Zoltar** – An oddly specific or unhinged piece of advice
 
 Each array contains around 30 unique entries, ensuring that every flip feels fresh, weird, and slightly cursed.
 
--This project was built to practise:
-
--Fetching and working with JSON data
-
--Selecting random items from arrays
-
--Creating interactive UI with CSS transitions
-
--Enhancing user experience with humour and surprise
++ This project was built to practise:
++ Fetching and working with JSON data
++ Selecting random items from arrays
++ Creating interactive UI with CSS transitions
++ Enhancing user experience with humour and surprise
 
 https://nperkinsr.github.io/zoltar/
 
